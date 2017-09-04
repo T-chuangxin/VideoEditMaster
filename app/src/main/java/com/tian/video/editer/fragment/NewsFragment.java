@@ -7,7 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.jwzt.shian.R;
+import com.tian.video.editer.R;
+
 
 /**
  * A simple {@link Fragment} subclass.

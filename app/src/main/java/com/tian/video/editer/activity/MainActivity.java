@@ -16,10 +16,12 @@ import android.view.MenuItem;
 
 
 import com.tian.video.editer.R;
+import com.tian.video.editer.broadcast.NetReceiver;
 import com.tian.video.editer.fragment.CourseFragment;
 import com.tian.video.editer.fragment.HomeFragemnt;
 import com.tian.video.editer.fragment.NewsFragment;
 import com.tian.video.editer.fragment.ProfilFragment;
+import com.tian.video.editer.widget.BottomNavigationViewHelper;
 
 
 public class MainActivity extends AppCompatActivity  {

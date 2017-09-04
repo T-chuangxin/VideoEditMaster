@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">TCX</string>
     <string name="title_home">首页</string>
-    <string name="title_dashboard">课程</string>
+    <string name="title_dashboard">视频</string>
     <string name="title_notifications">咨询</string>
     <string name="title_my">我的</string>
 

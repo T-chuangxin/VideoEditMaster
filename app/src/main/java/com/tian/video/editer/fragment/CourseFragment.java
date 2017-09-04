@@ -8,8 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.jwzt.shian.R;
-import com.jwzt.shian.activity.CourseDetialActivity;
+import com.tian.video.editer.R;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -43,13 +43,7 @@ public class CourseFragment extends Fragment {
      */
     private void initView() {
 
-        view.findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(getActivity(), CourseDetialActivity.class);
-                startActivity(intent);
-            }
-        });
+
 
 
 

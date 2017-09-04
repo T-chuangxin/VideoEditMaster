@@ -1,6 +1,6 @@
 package com.tian.video.editer.fragment;
 
-import android.content.Intent;
+
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.app.Fragment;
@@ -9,9 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.jwzt.shian.R;
-import com.jwzt.shian.activity.DownPagerActivity;
-import com.jwzt.shian.activity.SettingActivity;
+import com.tian.video.editer.R;
 
 
 public class ProfilFragment extends Fragment implements View.OnClickListener {
@@ -45,12 +43,7 @@ public class ProfilFragment extends Fragment implements View.OnClickListener {
 
     private void initView(){
 
-        ctl_title = (CollapsingToolbarLayout)view.findViewById(R.id.ctl_title);
-        tool_title = (Toolbar)view.findViewById(R.id.tl_title);
 
-        view.findViewById(R.id.iv_setting).setOnClickListener(this);
-
-        view.findViewById(R.id.rl_outline).setOnClickListener(this);
 
 
 
@@ -59,7 +52,7 @@ public class ProfilFragment extends Fragment implements View.OnClickListener {
 
 
     private void initData(){
-        tool_title.setTitle("");
+//        tool_title.setTitle("");
 //        ((MainActivity)getActivity()).setSupportActionBar(tool_title);
 
 //        ctl_title.setCollapsedTitleGravity(Gravity.CENTER);
@@ -74,14 +67,7 @@ public class ProfilFragment extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
 
         switch (v.getId()){
-            case R.id.iv_setting://设置
-                Intent intent=new Intent(getActivity(), SettingActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.rl_outline://离线缓存
-                startActivity(new Intent(getActivity(),DownPagerActivity.class));
 
-                break;
         }
 
 
