@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">TCX</string>
+    <string name="title_home">首页</string>
+    <string name="title_dashboard">课程</string>
+    <string name="title_notifications">咨询</string>
+    <string name="title_my">我的</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_base">BaseActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">账户</string>
+    <string name="prompt_password">密码</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">账户格式不对</string>
+    <string name="error_invalid_password">密码太短</string>
+    <string name="error_incorrect_password">密码不对</string>
+    <string name="error_field_required">必填项</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="title_activity_setting">SettingActivity</string>
+    <string name="title_activity_guide">GuideActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+
+</resources>
