@@ -2,13 +2,18 @@ package com.tian.video.editer.activity;
 
 import android.app.Dialog;
 import android.content.IntentFilter;
+import android.graphics.Color;
 import android.net.ConnectivityManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -18,6 +23,8 @@ import com.tian.video.editer.R;
 import com.tian.video.editer.broadcast.NetReceiver;
 import com.tian.video.editer.constant.NetConstant;
 import com.tian.video.editer.inter.OnNetStateChangeListener;
+
+import butterknife.ButterKnife;
 
 /**
  * 项目名称：VideoEditMaster
@@ -37,14 +44,23 @@ public abstract class BaseActivity extends AppCompatActivity implements OnNetSta
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
         super.onCreate(savedInstanceState, persistentState);
-        setContentView(getLayoutId());
+        super.setContentView(getLayoutId());
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            WindowManager.LayoutParams localLayoutParams = getWindow().getAttributes();
+            localLayoutParams.flags = (WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS | localLayoutParams.flags);
+        }
+
+
         mNetReceiver = new NetReceiver();
         mNetReceiver.setNetStateChangeListener(this);
         mFilter = new IntentFilter();
         mFilter.addAction(ConnectivityManager.CONNECTIVITY_ACTION);
 
         mMetrics = new DisplayMetrics();
-       getWindowManager().getDefaultDisplay().getMetrics(mMetrics);
+        getWindowManager().getDefaultDisplay().getMetrics(mMetrics);
+
+
 
         getInitData();
     }
@@ -55,11 +71,19 @@ public abstract class BaseActivity extends AppCompatActivity implements OnNetSta
      */
     public abstract int getLayoutId();
 
+//    /**
+//     * 初始化页面控件
+//     */
+//    public abstract void getInitView();
+
+
 
     /**
      * 初始化数据
      */
     public abstract void getInitData();
+
+
 
 
 
@@ -216,6 +240,8 @@ public abstract class BaseActivity extends AppCompatActivity implements OnNetSta
     public int getHeight(){
         return  mMetrics.heightPixels;
     }
+
+
 
 
 

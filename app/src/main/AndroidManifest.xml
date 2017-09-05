@@ -20,7 +20,9 @@
         </activity>
 
         <!-- Activity基类 -->
-        <activity android:name=".activity.BaseActivity" />
+        <activity android:name=".activity.BaseActivity"
+
+            />
 
         <!-- 网络广播监听 -->
         <receiver android:name=".broadcast.NetReceiver" />
@@ -29,6 +31,12 @@
             android:name=".activity.MainActivity"
             android:label="@string/title_activity_guide"
             android:theme="@style/AppTheme"></activity>
+
+
+        <!--展示页面-->
+        <activity android:name=".activity.SplashActivity"/>
+
+
     </application>
 
 </manifest>

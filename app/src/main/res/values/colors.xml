@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="common_select_color">#ff7447</color>
-    <color name="common_unselect_color">#333333</color>
+    <color name="common_select_color">#009688</color>
+    <color name="common_unselect_color">#FFFFFF</color>
     <color name="common_word_color_666666">#666666</color>
     <color name="common_word_color_333333">#333333</color>
     <color name="common_line_color_ededed">#ededed</color>
@@ -36,5 +36,6 @@
     <color name="indicator_unselected">#4D000000</color>
 
 
+    <color name="common_color">#2B2B2B</color>
 
 </resources>
