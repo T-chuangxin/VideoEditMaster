@@ -3,8 +3,9 @@ package com.tian.video.editer.skin.attr;
 import android.view.View;
 import android.widget.TextView;
 
-import ren.solid.skinloader.load.SkinManager;
-import ren.solid.skinloader.util.L;
+import com.tian.video.editer.skin.factory.SkinManager;
+import com.tian.video.editer.skin.utils.L;
+
 
 /**
  * Created by _SOLID

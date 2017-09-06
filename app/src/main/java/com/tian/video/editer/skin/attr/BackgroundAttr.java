@@ -4,8 +4,9 @@ import android.graphics.drawable.Drawable;
 import android.support.v7.widget.CardView;
 import android.view.View;
 
-import ren.solid.skinloader.load.SkinManager;
-import ren.solid.skinloader.util.L;
+import com.tian.video.editer.skin.factory.SkinManager;
+import com.tian.video.editer.skin.utils.L;
+
 
 /**
  * Created by _SOLID

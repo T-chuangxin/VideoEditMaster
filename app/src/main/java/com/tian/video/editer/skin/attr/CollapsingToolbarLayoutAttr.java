@@ -4,7 +4,8 @@ import android.support.design.widget.CollapsingToolbarLayout;
 import android.util.Log;
 import android.view.View;
 
-import ren.solid.skinloader.load.SkinManager;
+import com.tian.video.editer.skin.factory.SkinManager;
+
 
 /**
  * Created by _SOLID
