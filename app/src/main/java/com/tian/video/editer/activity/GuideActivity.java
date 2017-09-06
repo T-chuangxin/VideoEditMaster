@@ -21,6 +21,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
 import com.tian.video.editer.R;
 import com.tian.video.editer.fragment.PlaceholderFragment;
@@ -62,6 +63,8 @@ public class GuideActivity extends AppCompatActivity  {
     AppCompatButton buttonFinish;
     @InjectViews({R.id.imageViewIndicator0,R.id.imageViewIndicator1,R.id.imageViewIndicator2})
     List<ImageView> mIndicators;
+    @InjectView(R.id.main_content)
+    RelativeLayout mMainContent;
 
 
 
@@ -146,7 +149,7 @@ public class GuideActivity extends AppCompatActivity  {
         @Override
         public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
             int colorUpdate = (Integer) new ArgbEvaluator().evaluate(positionOffset, bgColors[position], bgColors[position == 2 ? position : position + 1]);
-            mViewPager.setBackgroundColor(colorUpdate);
+            mMainContent.setBackgroundColor(colorUpdate);
         }
 
         @Override

@@ -4,6 +4,7 @@ package com.tian.video.editer.fragment;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,13 +12,19 @@ import android.view.ViewGroup;
 
 import com.tian.video.editer.R;
 
+import butterknife.ButterKnife;
+import butterknife.InjectView;
+
 
 public class ProfilFragment extends Fragment implements View.OnClickListener {
 
 
+    @InjectView(R.id.tv_title_title)
+    AppCompatTextView mTitle;
+
+
     private View view;
-    private CollapsingToolbarLayout ctl_title;
-    private Toolbar tool_title;
+
 
     public ProfilFragment() {
         // Required empty public constructor
@@ -35,24 +42,16 @@ public class ProfilFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_profil, container, false);
-        initView();
+        ButterKnife.inject(this,view);
         initData();
         return view;
     }
 
 
-    private void initView(){
-
-
-
-
-
-    }
-
 
 
     private void initData(){
-//        tool_title.setTitle("");
+        mTitle.setText(R.string.title_my);
 //        ((MainActivity)getActivity()).setSupportActionBar(tool_title);
 
 //        ctl_title.setCollapsedTitleGravity(Gravity.CENTER);

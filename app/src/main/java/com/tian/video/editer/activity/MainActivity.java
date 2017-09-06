@@ -1,9 +1,6 @@
 package com.tian.video.editer.activity;
 
-import android.app.Dialog;
-import android.content.IntentFilter;
 import android.content.res.ColorStateList;
-import android.net.ConnectivityManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -19,7 +16,7 @@ import android.view.WindowManager;
 
 import com.tian.video.editer.R;
 import com.tian.video.editer.broadcast.NetReceiver;
-import com.tian.video.editer.fragment.CourseFragment;
+import com.tian.video.editer.fragment.VideoFragment;
 import com.tian.video.editer.fragment.HomeFragemnt;
 import com.tian.video.editer.fragment.NewsFragment;
 import com.tian.video.editer.fragment.ProfilFragment;
@@ -41,7 +38,7 @@ public class MainActivity extends AppCompatActivity  {
                     showFragment(mHomeFragment);
                     break;
                 case R.id.navigation_dashboard:
-                    showFragment(mCourseFragment);
+                    showFragment(mVideoFragment);
                     break;
                 case R.id.navigation_notifications:
                     showFragment(mNewsFragment);
@@ -56,7 +53,7 @@ public class MainActivity extends AppCompatActivity  {
 
     };
     private HomeFragemnt mHomeFragment;
-    private CourseFragment mCourseFragment;
+    private VideoFragment mVideoFragment;
     private NewsFragment mNewsFragment;
     private ProfilFragment mProfilFragment;
     private BottomNavigationView navigation;
@@ -86,7 +83,7 @@ public class MainActivity extends AppCompatActivity  {
                     showFragment(mHomeFragment);
                     break;
                 case R.id.navigation_dashboard:
-                    showFragment(mCourseFragment);
+                    showFragment(mVideoFragment);
                     break;
                 case R.id.navigation_notifications:
                     showFragment(mNewsFragment);
@@ -109,8 +106,8 @@ public class MainActivity extends AppCompatActivity  {
         if (mHomeFragment.isAdded()) {
             fm.putFragment(outState, HomeFragemnt.class.getSimpleName(), mHomeFragment);
         }
-        if (mCourseFragment.isAdded()) {
-            fm.putFragment(outState, CourseFragment.class.getSimpleName(), mCourseFragment);
+        if (mVideoFragment.isAdded()) {
+            fm.putFragment(outState, VideoFragment.class.getSimpleName(), mVideoFragment);
         }
         if (mNewsFragment.isAdded()) {
             fm.putFragment(outState, NewsFragment.class.getSimpleName(), mNewsFragment);
@@ -126,14 +123,14 @@ public class MainActivity extends AppCompatActivity  {
         if (fragment instanceof HomeFragemnt) {
             fm.beginTransaction()
                     .show(mHomeFragment)
-                    .hide(mCourseFragment)
+                    .hide(mVideoFragment)
                     .hide(mNewsFragment)
                     .hide(mProfilFragment)
                     .commit();
 
-        } else if (fragment instanceof CourseFragment) {
+        } else if (fragment instanceof VideoFragment) {
             fm.beginTransaction()
-                    .show(mCourseFragment)
+                    .show(mVideoFragment)
                     .hide(mHomeFragment)
                     .hide(mNewsFragment)
                     .hide(mProfilFragment)
@@ -142,14 +139,14 @@ public class MainActivity extends AppCompatActivity  {
             fm.beginTransaction()
                     .show(mNewsFragment)
                     .hide(mHomeFragment)
-                    .hide(mCourseFragment)
+                    .hide(mVideoFragment)
                     .hide(mProfilFragment)
                     .commit();
         }else if(fragment instanceof ProfilFragment){
             fm.beginTransaction()
                     .show(mProfilFragment)
                     .hide(mHomeFragment)
-                    .hide(mCourseFragment)
+                    .hide(mVideoFragment)
                     .hide(mNewsFragment)
                     .commit();
         }
@@ -167,12 +164,12 @@ public class MainActivity extends AppCompatActivity  {
         FragmentManager fm = getSupportFragmentManager();
         if (savedInstanceState == null) {
             mHomeFragment = HomeFragemnt.newInstance();
-            mCourseFragment = CourseFragment.newInstance();
+            mVideoFragment = VideoFragment.newInstance();
             mNewsFragment= NewsFragment.newInstance();
             mProfilFragment = ProfilFragment.newInstance();
         } else {
             mHomeFragment = (HomeFragemnt) fm.getFragment(savedInstanceState, HomeFragemnt.class.getSimpleName());
-            mCourseFragment = (CourseFragment) fm.getFragment(savedInstanceState, CourseFragment.class.getSimpleName());
+            mVideoFragment = (VideoFragment) fm.getFragment(savedInstanceState, VideoFragment.class.getSimpleName());
             mNewsFragment = (NewsFragment) fm.getFragment(savedInstanceState, NewsFragment.class.getSimpleName());
             mProfilFragment = (ProfilFragment) fm.getFragment(savedInstanceState, ProfilFragment.class.getSimpleName());
         }
@@ -183,9 +180,9 @@ public class MainActivity extends AppCompatActivity  {
                     .commit();
         }
 
-        if (!mCourseFragment.isAdded()) {
+        if (!mVideoFragment.isAdded()) {
             fm.beginTransaction()
-                    .add(R.id.container, mCourseFragment, CourseFragment.class.getSimpleName())
+                    .add(R.id.container, mVideoFragment, VideoFragment.class.getSimpleName())
                     .commit();
 
         }
