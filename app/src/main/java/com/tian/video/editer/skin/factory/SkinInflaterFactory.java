@@ -22,8 +22,7 @@ import java.util.List;
 
 
 /**
- * Created by _SOLID
- * Date:2016/4/13
+ * Created by TCX
  * Time:21:19
  * <p>
  * 自定义的InflaterFactory，用来代替默认的InflaterFactory

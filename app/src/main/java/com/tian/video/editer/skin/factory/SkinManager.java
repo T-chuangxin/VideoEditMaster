@@ -24,8 +24,7 @@ import java.util.List;
 
 
 /**
- * Created by _SOLID
- * Date:2016/4/13
+ * Created by TCX
  * Time:21:07
  */
 public class SkinManager implements ISkinLoader {

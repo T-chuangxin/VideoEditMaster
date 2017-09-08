@@ -10,8 +10,7 @@ import com.tian.video.editer.skin.factory.SkinManager;
 
 
 /**
- * Created by _SOLID
- * Date:2016/4/14
+ * Created by TCX
  * Time:17:45
  */
 public class NavigationViewAttr extends SkinAttr {

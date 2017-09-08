@@ -11,8 +11,7 @@ import java.util.List;
 
 
 /**
- * Created by _SOLID
- * Date:2016/4/14
+ * Created by TCX
  * Time:9:21
  * <p/>
  * 用来存储那些有皮肤更改需求的View及其对应的属性

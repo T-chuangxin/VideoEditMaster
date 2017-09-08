@@ -13,11 +13,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-
 /**
- * Created by _SOLID
- * Date:2016/4/14
- * Time:10:35
+ * 基础Fragment类的封装
  */
 public class SkinBaseFragment extends Fragment implements IDynamicNewView {
 

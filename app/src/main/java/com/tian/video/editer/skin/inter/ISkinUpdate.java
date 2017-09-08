@@ -1,8 +1,7 @@
 package com.tian.video.editer.skin.inter;
 
 /**
- * Created by _SOLID
- * Date:2016/4/13
+ * Created by TCX
  * Time:20:48
  * <p/>
  * <p/>

@@ -6,8 +6,7 @@ import com.tian.video.editer.skin.utils.PreferencesUtils;
 
 
 /**
- * Created by _SOLID
- * Date:2016/4/13
+ * Created by TCX
  * Time:21:29
  */
 public class SkinConfig {

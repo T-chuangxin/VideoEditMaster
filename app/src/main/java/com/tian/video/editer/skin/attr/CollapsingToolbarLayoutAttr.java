@@ -8,9 +8,10 @@ import com.tian.video.editer.skin.factory.SkinManager;
 
 
 /**
- * Created by _SOLID
- * Date:2016/4/14
+ * Created by TCX
  * Time:14:23
+ *
+ *
  */
 public class CollapsingToolbarLayoutAttr extends SkinAttr {
     @Override

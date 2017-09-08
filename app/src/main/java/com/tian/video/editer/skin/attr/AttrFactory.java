@@ -3,9 +3,11 @@ package com.tian.video.editer.skin.attr;
 import android.util.Log;
 
 /**
- * Created by _SOLID
- * Date:2016/4/14
+ * Created TCX
  * Time:9:47
+ *
+ * 属性切换工厂
+ *
  */
 public class AttrFactory {
 

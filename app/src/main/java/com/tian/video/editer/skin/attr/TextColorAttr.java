@@ -9,7 +9,6 @@ import com.tian.video.editer.skin.utils.L;
 
 /**
  * Created by _SOLID
- * Date:2016/4/13
  * Time:22:53
  */
 public class TextColorAttr extends SkinAttr {

@@ -1,8 +1,7 @@
 package com.tian.video.editer.skin.inter;
 
 /**
- * Created by _SOLID
- * Date:2016/4/13
+ * Created by TCX
  * Time:20:47
  * <p/>
  * 用来添加、删除需要皮肤更新的界面以及通知界面皮肤更新

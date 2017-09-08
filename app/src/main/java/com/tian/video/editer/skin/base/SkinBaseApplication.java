@@ -6,9 +6,12 @@ import com.tian.video.editer.skin.factory.SkinManager;
 
 
 /**
- * Created by _SOLID
- * Date:2016/4/14
+ * Created TCX
  * Time:10:54
+ * <p>
+ * 换肤管理类在application中初始化
+ * <p/>
+ *
  */
 public class SkinBaseApplication extends Application {
 

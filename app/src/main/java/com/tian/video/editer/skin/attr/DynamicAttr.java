@@ -1,8 +1,7 @@
 package com.tian.video.editer.skin.attr;
 
 /**
- * Created by _SOLID
- * Date:2016/4/14
+ * Created by TCX
  * Time:10:21
  */
 public class DynamicAttr {

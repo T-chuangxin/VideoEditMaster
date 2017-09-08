@@ -1,8 +1,7 @@
 package com.tian.video.editer.skin.inter;
 
 /**
- * Created by _SOLID
- * Date:2016/4/13
+ * Created by TCX
  * Time:21:07
  * <p>
  * 加载皮肤时的回调接口

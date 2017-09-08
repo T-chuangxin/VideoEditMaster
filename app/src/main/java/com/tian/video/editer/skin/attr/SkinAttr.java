@@ -3,8 +3,7 @@ package com.tian.video.editer.skin.attr;
 import android.view.View;
 
 /**
- * Created by _SOLID
- * Date:2016/4/13
+ * Created by TCX
  * Time:21:38
  */
 public abstract class SkinAttr {

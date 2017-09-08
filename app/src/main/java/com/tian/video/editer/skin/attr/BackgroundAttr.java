@@ -9,9 +9,11 @@ import com.tian.video.editer.skin.utils.L;
 
 
 /**
- * Created by _SOLID
- * Date:2016/4/13
+ * Created by TCX
  * Time:21:46
+ *
+ * 背景切换
+ *
  */
 public class BackgroundAttr extends SkinAttr {
 
