@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rl_root_view"
+    >
+
+    <include layout="@layout/common_title_layout"></include>
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        >
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/theme1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="默认主题"
+            />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/theme2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="绿色主题"
+
+            />
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/theme3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="白色主题"
+            />
+
+
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>
