@@ -84,7 +84,6 @@ public class HttpMethods {
      * @param subscriber
      */
     public void getConfig(Subscriber<CodeConfigBean> subscriber) {
-
         RefrofitGsonParse();
         ConfigInterface mConfigInterface = retrofit.create(ConfigInterface.class);
         Observable observable = mConfigInterface.getConfigInfo()

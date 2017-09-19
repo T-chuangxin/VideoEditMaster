@@ -2,6 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.tian.video.editer">
 
+
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+
     <application
         android:name=".application.MyApplication"
         android:allowBackup="true"
@@ -11,8 +19,8 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <!--<activity android:name=".activity.GuideActivity">-->
-        <activity android:name=".activity.ThemeTestActivity">
+        <activity android:name=".activity.GuideActivity">
+        <!--<activity android:name=".activity.ThemeTestActivity">-->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -36,6 +44,12 @@
 
         <!--展示页面-->
         <activity android:name=".activity.SplashActivity"/>
+
+        <!--设置界面-->
+        <activity android:name=".activity.SettingActivity"/>
+
+        <!--换肤界面-->
+        <activity android:name=".activity.SkinsActivity"/>
 
 
     </application>

@@ -3,6 +3,7 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/rl_root_view"
+    android:fitsSystemWindows="true"
     >
 
     <include layout="@layout/common_title_layout"></include>

@@ -12,6 +12,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
 import android.view.MenuItem;
 import android.view.WindowManager;
+import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 
 
 import com.tian.video.editer.R;
@@ -20,10 +22,11 @@ import com.tian.video.editer.fragment.VideoFragment;
 import com.tian.video.editer.fragment.HomeFragemnt;
 import com.tian.video.editer.fragment.NewsFragment;
 import com.tian.video.editer.fragment.ProfilFragment;
+import com.tian.video.editer.skin.base.SkinBaseActivity;
 import com.tian.video.editer.widget.BottomNavigationViewHelper;
 
 
-public class MainActivity extends AppCompatActivity  {
+public class MainActivity extends SkinBaseActivity {
 
     private static final String KEY_BOTTOM_NAVIGATION_VIEW_SELECTED_ID = "KEY_BOTTOM_NAVIGATION_VIEW_SELECTED_ID";
 
@@ -220,6 +223,13 @@ public class MainActivity extends AppCompatActivity  {
         ColorStateList csl = new ColorStateList(states, colors);
         navigation.setItemTextColor(csl);
         navigation.setItemIconTintList(csl);
+        LinearLayout rootView=(LinearLayout)this.findViewById(R.id.ll_main_root_view);
+        FrameLayout contenterView=(FrameLayout)this.findViewById(R.id.container);
+
+//        dynamicAddSkinEnableView(navigation, "background", R.color.colorPrimary);
+        dynamicAddSkinEnableView(rootView, "background", R.color.common_color);
+        dynamicAddSkinEnableView(contenterView, "background", R.color.colorPrimary);
+
 
 
     }

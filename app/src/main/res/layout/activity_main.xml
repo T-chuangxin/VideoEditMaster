@@ -6,15 +6,9 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     android:background="@color/common_color"
+    android:id="@+id/ll_main_root_view"
     android:orientation="vertical">
 
-
-    
-    
-    
-    
-    
-    
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -26,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:background="@android:color/transparent"
+        android:background="@color/common_word_color_333333"
         app:menu="@menu/navigation"/>
 
 </LinearLayout>

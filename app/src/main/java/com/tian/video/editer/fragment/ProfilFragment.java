@@ -1,26 +1,39 @@
 package com.tian.video.editer.fragment;
 
 
+import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.tian.video.editer.R;
+import com.tian.video.editer.activity.MainActivity;
+import com.tian.video.editer.activity.SettingActivity;
+import com.tian.video.editer.skin.base.SkinBaseFragment;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
+import butterknife.OnClick;
+
+import static com.tian.video.editer.R.id.ctl_title;
 
 
-public class ProfilFragment extends Fragment implements View.OnClickListener {
+public class ProfilFragment extends SkinBaseFragment {
 
 
-    @InjectView(R.id.tv_title_title)
-    AppCompatTextView mTitle;
+    @InjectView(R.id.ctl_title)
+    CollapsingToolbarLayout ctlTitle;
+    @InjectView(R.id.tl_title)
+    Toolbar toolTitle;
+
+
 
 
     private View view;
@@ -50,26 +63,35 @@ public class ProfilFragment extends Fragment implements View.OnClickListener {
 
 
 
-    private void initData(){
-        mTitle.setText(R.string.title_my);
-//        ((MainActivity)getActivity()).setSupportActionBar(tool_title);
 
-//        ctl_title.setCollapsedTitleGravity(Gravity.CENTER);
-//        ctl_title.setExpandedTitleGravity(Gravity.CENTER);
-//        ctl_title.setTitle("标题");
-//        ctl_title.setExpandedTitleColor(Color.BLACK);
-//        ctl_title.setCollapsedTitleTextColor(Color.BLACK);
-    }
+    @OnClick(R.id.iv_setting)
+    public void setting(View view){
+        switch (view.getId()){
+            case R.id.action_settings:
+                startActivity(new Intent(getActivity(),SettingActivity.class));
 
+                break;
 
-    @Override
-    public void onClick(View v) {
-
-        switch (v.getId()){
 
         }
-
-
-
     }
+
+
+
+
+
+
+    private void initData(){
+//        mTitle.setText(R.string.title_my);
+//        ((MainActivity)getActivity()).setSupportActionBar(toolTitle);
+//
+//        ctlTitle.setCollapsedTitleGravity(Gravity.CENTER);
+//        ctlTitle.setExpandedTitleGravity(Gravity.CENTER);
+//        ctlTitle.setTitle("标题");
+//        ctlTitle.setExpandedTitleColor(Color.BLACK);
+//        ctlTitle.setCollapsedTitleTextColor(Color.BLACK);
+    }
+
+
+
 }

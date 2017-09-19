@@ -23,6 +23,7 @@ import com.tian.video.editer.R;
 import com.tian.video.editer.broadcast.NetReceiver;
 import com.tian.video.editer.constant.NetConstant;
 import com.tian.video.editer.inter.OnNetStateChangeListener;
+import com.tian.video.editer.skin.base.SkinBaseActivity;
 
 import butterknife.ButterKnife;
 
@@ -34,7 +35,7 @@ import butterknife.ButterKnife;
  * 修改人：TCX
  * 修改备注：
  */
-public abstract class BaseActivity extends AppCompatActivity implements OnNetStateChangeListener {
+public abstract class BaseActivity extends SkinBaseActivity implements OnNetStateChangeListener {
 
     private NetReceiver mNetReceiver;
     private IntentFilter mFilter;

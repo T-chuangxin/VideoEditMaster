@@ -7,8 +7,11 @@ import android.support.v7.widget.AppCompatTextView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import com.tian.video.editer.R;
+import com.tian.video.editer.skin.base.SkinBaseFragment;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -17,12 +20,17 @@ import butterknife.InjectView;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class NewsFragment extends Fragment {
+public class NewsFragment extends SkinBaseFragment {
 
 
 
     @InjectView(R.id.tv_title_title)
     AppCompatTextView mTitle;
+    @InjectView(R.id.ll_title_left_btn)
+    LinearLayout leftBtn;
+    @InjectView(R.id.rl_title_root)
+    RelativeLayout titleBg;
+
 
 
     public NewsFragment() {
@@ -54,6 +62,9 @@ public class NewsFragment extends Fragment {
     private void initData() {
         mTitle.setText(R.string.title_notifications);
 
+        leftBtn.setVisibility(View.INVISIBLE);
+
+        dynamicAddSkinView(titleBg,"background", R.color.common_color);//头部主题样式
 
 
     }

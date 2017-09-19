@@ -8,8 +8,11 @@ import android.support.v7.widget.AppCompatTextView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import com.tian.video.editer.R;
+import com.tian.video.editer.skin.base.SkinBaseFragment;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -18,11 +21,16 @@ import butterknife.InjectView;
 /**
  * 首页Fragment
  */
-public class HomeFragemnt extends Fragment {
+public class HomeFragemnt extends SkinBaseFragment {
 
 
     @InjectView(R.id.tv_title_title)
     AppCompatTextView mTitle;
+    @InjectView(R.id.rl_title_root)
+    RelativeLayout titleBg;
+    @InjectView(R.id.ll_title_left_btn)
+    LinearLayout leftBtn;
+
 
 
 
@@ -53,8 +61,10 @@ public class HomeFragemnt extends Fragment {
      * 初始化页面控件
      */
     private void initData() {
-
         mTitle.setText(R.string.title_home);
+        leftBtn.setVisibility(View.INVISIBLE);
+        dynamicAddSkinView(titleBg,"background", R.color.common_color);//头部主题样式
+
 
 
     }
