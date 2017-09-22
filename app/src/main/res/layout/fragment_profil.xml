@@ -80,7 +80,7 @@
                         android:text="个人中心"/>
 
                     <ImageView
-                        android:id="@+id/iv_setting"
+                        android:id="@+id/iv_profile_setting"
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:layout_alignParentRight="true"

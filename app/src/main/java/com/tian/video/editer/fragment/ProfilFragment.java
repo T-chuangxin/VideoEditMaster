@@ -64,16 +64,15 @@ public class ProfilFragment extends SkinBaseFragment {
 
 
 
-    @OnClick(R.id.iv_setting)
+    @OnClick(R.id.iv_profile_setting)
     public void setting(View view){
-        switch (view.getId()){
-            case R.id.action_settings:
+//        switch (view.getId()){
+//            case R.id.iv_profile_setting:
                 startActivity(new Intent(getActivity(),SettingActivity.class));
-
-                break;
-
-
-        }
+//                break;
+//
+//
+//        }
     }
 
 

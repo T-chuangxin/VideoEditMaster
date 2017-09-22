@@ -52,17 +52,8 @@ public abstract class BaseActivity extends SkinBaseActivity implements OnNetStat
             localLayoutParams.flags = (WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS | localLayoutParams.flags);
         }
 
-
-        mNetReceiver = new NetReceiver();
-        mNetReceiver.setNetStateChangeListener(this);
-        mFilter = new IntentFilter();
-        mFilter.addAction(ConnectivityManager.CONNECTIVITY_ACTION);
-
         mMetrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(mMetrics);
-
-
-
         getInitData();
     }
 
@@ -95,8 +86,13 @@ public abstract class BaseActivity extends SkinBaseActivity implements OnNetStat
      */
     @Override
     protected void onResume() {
+
+        mNetReceiver = new NetReceiver();
+        mNetReceiver.setNetStateChangeListener(this);
+        mFilter = new IntentFilter();
+        mFilter.addAction(ConnectivityManager.CONNECTIVITY_ACTION);
+        registerReceiver(mNetReceiver,mFilter);
         super.onResume();
-       registerReceiver(mNetReceiver,mFilter);
 
     }
 
@@ -107,7 +103,9 @@ public abstract class BaseActivity extends SkinBaseActivity implements OnNetStat
     @Override
     protected void onPause() {
         super.onPause();
-        unregisterReceiver(mNetReceiver);
+        if (mNetReceiver!=null){
+            unregisterReceiver(mNetReceiver);
+        }
 
     }
 
